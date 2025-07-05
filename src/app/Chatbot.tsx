@@ -48,6 +48,13 @@ const Chatbot: React.FC = () => {
 
   return (
     <div className="chatbot-container">
+      <button
+        className="chatbot-clear-btn"
+        onClick={() => setMessages([])}
+        style={{ alignSelf: 'flex-end', margin: '0.5rem 1rem 0 0', background: '#f87171', color: '#fff', border: 'none', borderRadius: '8px', padding: '0.3rem 1rem', cursor: 'pointer', fontSize: '0.95rem' }}
+      >
+        Clear Chat
+      </button>
       <div className="chatbot-messages">
         {messages.map((msg) => (
           <div key={msg.id} className={`chatbot-message chatbot-message-${msg.sender}`}>
